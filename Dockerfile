@@ -1,6 +1,3 @@
 FROM ubuntu:20.04
-RUN mkdir /app
-WORKDIR /app
-ADD . /app
-RUN echo -e '<html>\n<html>\n\t<body>\n\t\t<h1>Hello World!</h1>\n\t</body>\n</html>' > index.html
+RUN echo '<html>\n<html>\n\t<body>\n\t\t<h1>Hello World!</h1>\n\t</body>\n</html>' > index.html
 CMD cat index.html
