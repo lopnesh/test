@@ -22,4 +22,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: lopnesh/test:GITHUB_RUN_NUMBER
+          tags: lopnesh/test:"$GITHUB_RUN_NUMBER"
