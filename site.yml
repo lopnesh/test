@@ -22,6 +22,9 @@
     apt:
       name: ['docker-ce', 'docker-ce-cli', 'containerd.io']
       update_cache: yes
+  
+  - name: add user and start docker
+    command: groupadd docker && usermod -aG docker $USER && newgrp docker && service docker start    
 
   - name: Install prerequisites for docker-compose
     apt:
